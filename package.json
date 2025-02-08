@@ -1,0 +1,14 @@
+{
+  "name": "Weather-app",
+  "version": "1.0.0",
+  "description": "Weather app",
+  "main": "main.js",
+  "author": "Panos Daveas",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^34.1.1"
+  },
+   "scripts": {
+    "start": "electron ."
+  }
+}

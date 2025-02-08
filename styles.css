@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: #2a2e38;
+    padding: 0;
+    background-color: #cfdbe9;
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    /* Remove default margin */
+    /* Squares grid background */
+    background-image:
+        linear-gradient(to right, rgba(228, 240, 252, 255) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(228, 240, 252, 255) 1px, transparent 1px);
+    background-size: 32px 32px;
+    /* Adjust the size of the squares */
+}
+
+.window {
+    background-color: #fff5f5;
+    border-radius: 8px;
+    border: 3px solid #3b362a;
+    width: 400px;
+    height: 600px;
+    /* align-self: center; */
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+}
+
+.window-header {
+    background-color: #fbc4c0;
+    padding: 8px 16px 8px 16px;
+    border-bottom: 3px solid #3b362a;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: space-around;
+    /* -webkit-app-region: drag; */
+}
+
+.window-header-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.window-button {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    /* border: 2px solid #3b362a; */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.window-button:nth-child(1) {
+    background-color: #ff5f57;
+}
+
+.window-button:nth-child(2) {
+    background-color: #ffbd2e;
+}
+
+.window-title {
+    text-align: end;
+    font-size: 16px;
+}
+
+header {
+    background-color: #fbe6e1;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 3px solid #3b362a;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Full height */
+    /* display: block; */
+    padding: 1.5rem;
+    background-color: #fef6f4;
+    margin-bottom: 1rem;
+}
+
+main .top, .middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 equal columns */
+    align-items: center;
+    /* Center content vertically */
+    justify-items: center;
+    /* Center content horizontally */
+    gap: 8px;
+    /* Vertical gap inside each column */
+    padding: 0px 32px 8px 32px;
+    /* border-bottom: 2px solid #3b362a; */
+}
+
+.top>div,
+.middle>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    /* border: 2px solid #3b362a; */
+    gap: 8px;
+    /* 8px gap between items in each column */
+}
+
+main .bottom {
+    background-color: #fffffd;
+    background-image: url('Assets/Images/sky1.jpeg');
+    background-size: cover;
+    /* Ensures the image covers the entire div without distortion */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+
+    height: 260px;
+    border: 3px solid #3b362a;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+
+.bottom>img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 3px solid #2b323a;
+    background-size: cover;
+    background-position: center;
+}
+
+.circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #fbe6e1;
+    border: 2px solid #3b362a;
+    background-image: url('Assets/Images/3.png');
+    background-size: 80%;
+    /* Ensures the image covers the entire div without distortion */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+}
+
+button {
+    background-color: #fffffd;
+    color: #3b362a;
+    border: 2px solid #3b362a;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    width: 100%;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 3px solid #2b323a;
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
