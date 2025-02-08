@@ -33,6 +33,7 @@ body {
     overflow: hidden;
     position: relative;
     font-size: 12px;
+    /* box-shadow: #3b362a 2px 2px; */
 }
 
 .window-header {
@@ -90,7 +91,8 @@ main {
     margin-bottom: 1rem;
 }
 
-main .top, .middle {
+main .top,
+.middle {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* 2 equal columns */
@@ -118,27 +120,32 @@ main .top, .middle {
 
 main .bottom {
     background-color: #fffffd;
-    background-image: url('Assets/Images/sky1.jpeg');
-    background-size: cover;
+    /* background-image: url('Assets/Images/sky1.jpeg'); */
+    /* background-size: cover; */
     /* Ensures the image covers the entire div without distortion */
-    background-position: center;
+    /* background-position: center; */
     /* Centers the image */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Prevents tiling */
 
-    height: 260px;
+    height: auto;
     border: 3px solid #3b362a;
     border-radius: 16px;
-    margin-top: 16px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom>img {
     width: 100%;
-    height: auto;
+    height: 220px;
     border-radius: 16px;
-    border: 3px solid #2b323a;
+    border: 2px solid #2b323a;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .circle {
@@ -147,8 +154,8 @@ main .bottom {
     border-radius: 50%;
     background-color: #fbe6e1;
     border: 2px solid #3b362a;
-    background-image: url('Assets/Images/3.png');
-    background-size: 80%;
+    background-image: url('Assets/Images/cat.png');
+    background-size: 75%;
     /* Ensures the image covers the entire div without distortion */
     background-position: center;
     /* Centers the image */
@@ -180,4 +187,67 @@ h2 {
     font-size: 18px;
     margin: 0;
     padding: 0;
+}
+
+.window-popup {
+    background-color: #eff3fe;
+    border-radius: 8px;
+    border: 3px solid #3b362a;
+    width: 220px;
+    height: auto;
+    /* align-self: center; */
+    overflow: hidden;
+    position: fixed;
+    bottom: 220px;
+    left: 50px;
+    font-size: 12px;
+    box-shadow: #3b362a 2px 2px;
+}
+
+.window-popup-header {
+    background-color: #cadaf1;
+    padding: 8px 16px 8px 16px;
+    border-bottom: 3px solid #3b362a;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: space-around;
+    /* -webkit-app-region: drag; */
+}
+
+.window-popup-header-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.window-popup-button {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    /* border: 2px solid #3b362a; */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.window-popup-button:nth-child(1) {
+    background-color: #ff5f57;
+}
+
+.window-popup-button:nth-child(2) {
+    background-color: #ffbd2e;
+}
+
+.window-popup-title {
+    text-align: end;
+    font-size: 16px;
+}
+
+.window-popup-content {
+    padding: 16px;
+    text-align: center;
+}
+
+.window-popup-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
 }

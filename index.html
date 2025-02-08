@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
     <title>Under the Weather</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,16 +16,16 @@
             <div class="window-title">#MOOD BOARD</div>
         </div>
         <header>
-            <p>Page Title</p>
+            <p>dreamiedesire</p>
         </header>
         <main>
             <div class="top">
                 <div>
                     <div class="circle"></div>
-                    <p>Emma</p>
+                    <p>Wen-chan</p>
                 </div>
                 <div>
-                    <h2>Feb.19</h2>
+                    <h2 id="date"></h2>
                     <button>Follow</button>
                 </div>
             </div>
@@ -41,9 +39,26 @@
                 </div>
             </div>
 
-            <div class="bottom"></div>
+            <div class="bottom">
+                <img src="Assets/Images/sky1.jpeg">
+            </div>
         </main>
     </div>
+    <div class="window-popup">
+        <div class="window-popup-header">
+            <div class="window-popup-header-buttons">
+                <div class="window-popup-button" id="close-popup-btn"></div>
+                <div class="window-popup-button" id="minimize-popup-btn"></div>
+            </div>
+            <div class="window-popup-title">popup</div>
+        </div>
+        <div class="window-popup-content">
+            <p>keep dreaming or wake up</p>
+            <div class="window-popup-content-grid">
+                <button>dream</button>
+                <button>wake</button>
+            </div>
+        </div>
     <script src="renderer.js"></script>
 </body>
 </html>

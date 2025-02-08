@@ -14,3 +14,8 @@ document.getElementById("close-btn").addEventListener("click", () => {
 document.getElementById("minimize-btn").addEventListener("click", () => {
   ipcRenderer.send("minimize-app");
 });
+
+const today = new Date()
+  .toLocaleDateString("en-US", { month: "short", day: "numeric" })
+  .replace(" ", ".");
+document.getElementById("date").innerHTML = today;
