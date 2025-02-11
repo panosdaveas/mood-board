@@ -26,13 +26,13 @@
                 </div>
                 <div>
                     <h2 id="date"></h2>
-                    <button>Follow</button>
+                    <button id="time"></button>
                 </div>
             </div>
             
             <div class="middle">
                 <div>
-                    <button>Item 3A</button>
+                    <button id="start">start here</button>
                 </div>
                 <div>
                     <button>Item 4A</button>
@@ -40,6 +40,7 @@
             </div>
 
             <div class="bottom">
+                <p id="weather"></p>
                 <img src="Assets/Images/sky1.jpeg">
             </div>
         </main>
@@ -55,10 +56,37 @@
         <div class="window-popup-content">
             <p>keep dreaming or wake up</p>
             <div class="window-popup-content-grid">
-                <button>dream</button>
-                <button>wake</button>
+                <button id="dream">dream</button>
+                <button id="wake">wake</button>
             </div>
         </div>
+    </div>
+    <div class="window-popup" id="wake-popup">
+        <div class="window-popup-header">
+            <div class="window-popup-header-buttons">
+                <div class="window-popup-button" id="close-wake-popup-btn"></div>
+                <div class="window-popup-button" id="minimize-wake-popup-btn"></div>
+            </div>
+            <div class="window-popup-title">popup</div>
+        </div>
+        <div class="window-popup-content">
+            <p id="wd-quote">rise & shine!</p>
+            <img src="Assets/Images/coffee.png">
+        </div>
+    </div>
+    <div class="window-popup" id="dream-popup">
+        <div class="window-popup-header">
+            <div class="window-popup-header-buttons">
+                <div class="window-popup-button" id="close-dream-popup-btn"></div>
+                <div class="window-popup-button" id="minimize-dream-popup-btn"></div>
+            </div>
+            <div class="window-popup-title">popup</div>
+        </div>
+        <div class="window-popup-content">
+            <p>sweet dreams!</p>
+            <img src="Assets/Images/cat.png">
+        </div>
+    </div>
     <script src="renderer.js"></script>
 </body>
 </html>

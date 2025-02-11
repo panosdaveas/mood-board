@@ -1,10 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root {
+    --primary-color: #2a2e38;
+    --body-background-color: #cfdbe9;
+    --accent-color: #3b362a;
+    --window-background-color: #fff5f5;
+    --window-header-color: #fbc4c0;
+    --title-header-color: #fbe6e1;
+    --quit-button-color: #ff5f57;
+    --minimize-button-color: #ffbd2e;
+    --popup-background-color: #eff3fe;
+    --popup-header-color: #cadaf1;
+    --button-background-color: #fffffd;
+    --font-color: #2a2e38;
+    --main-background-color: #fef6f4;
+    --popup-header-color: #cadaf1;
+    --popup-content-color: #eff3fe;
+}
+
+* {
+    border-color: var(--accent-color);
+    font: var(--font-color);
+}
 
 body {
     font-family: 'Press Start 2P', cursive;
     color: #2a2e38;
     padding: 0;
-    background-color: #cfdbe9;
+    background-color: var(--body-background-color);
     /* display: flex; */
     display: flex;
     justify-content: center;
@@ -24,9 +46,9 @@ body {
 }
 
 .window {
-    background-color: #fff5f5;
+    background-color: var(--window-background-color);
     border-radius: 8px;
-    border: 3px solid #3b362a;
+    border: 3px solid var(--accent-color);
     width: 400px;
     height: 600px;
     /* align-self: center; */
@@ -37,9 +59,9 @@ body {
 }
 
 .window-header {
-    background-color: #fbc4c0;
+    background-color: var(--window-header-color);
     padding: 8px 16px 8px 16px;
-    border-bottom: 3px solid #3b362a;
+    border-bottom: 3px solid var(--accent-color);
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: space-around;
@@ -54,18 +76,18 @@ body {
 .window-button {
     width: 16px;
     height: 16px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    /* border: 2px solid #3b362a; */
+    /* border: 2px solid rgba(0, 0, 0, 0.1); */
+    border: 2px solid var(--accent-color);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .window-button:nth-child(1) {
-    background-color: #ff5f57;
+    background-color: var(--quit-button-color);
 }
 
 .window-button:nth-child(2) {
-    background-color: #ffbd2e;
+    background-color: var(--minimize-button-color);
 }
 
 .window-title {
@@ -74,10 +96,10 @@ body {
 }
 
 header {
-    background-color: #fbe6e1;
+    background-color: var(--title-header-color);
     padding: 8px;
     text-align: center;
-    border-bottom: 3px solid #3b362a;
+    border-bottom: 3px solid var(--accent-color);
 }
 
 main {
@@ -87,7 +109,7 @@ main {
     /* Full height */
     /* display: block; */
     padding: 1.5rem;
-    background-color: #fef6f4;
+    background-color: var(--main-background-color);
     margin-bottom: 1rem;
 }
 
@@ -119,30 +141,23 @@ main .top,
 }
 
 main .bottom {
-    background-color: #fffffd;
-    /* background-image: url('Assets/Images/sky1.jpeg'); */
-    /* background-size: cover; */
-    /* Ensures the image covers the entire div without distortion */
-    /* background-position: center; */
-    /* Centers the image */
-    /* background-repeat: no-repeat; */
-    /* Prevents tiling */
-
+    background-color: var(--button-background-color);
     height: auto;
-    border: 3px solid #3b362a;
+    border: 3px solid var(--accent-color);
     border-radius: 16px;
     margin-top: 8px;
     margin-bottom: 32px;
-    padding: 16px;
+    padding: 8px 16px 16px 16px;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .bottom>img {
     width: 100%;
     height: 220px;
     border-radius: 16px;
-    border: 2px solid #2b323a;
+    border: 2px solid var(--accent-color);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,7 +167,7 @@ main .bottom {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: #fbe6e1;
+    background-color: var(--title-header-color);
     border: 2px solid #3b362a;
     background-image: url('Assets/Images/cat.png');
     background-size: 75%;
@@ -163,22 +178,40 @@ main .bottom {
 }
 
 button {
-    background-color: #fffffd;
+    background-color: var(--button-background-color);
     color: #3b362a;
-    border: 2px solid #3b362a;
+    border: 2px solid var(--accent-color);
     border-radius: 8px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     cursor: pointer;
     font-family: inherit;
     font-size: 12px;
     width: 100%;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.95);
+    /* Slightly shrink button when clicked */
+    box-shadow: inset 1px 1px 1px 1px var(--accent-color);
+    /* Inner shadow for pressed effect */
+}
+
+button:disabled {
+    color: var(--accent-color);
+    cursor: not-allowed;
+    /* Show 'not-allowed' cursor */
+    opacity: 0.6;
+    /* Make it slightly transparent */
+    pointer-events: none;
+    /* Prevent clicks */
 }
 
 section img {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    border: 3px solid #2b323a;
+    border: 3px solid var(--accent-color);
     background-size: cover;
     background-position: center;
 }
@@ -190,24 +223,36 @@ h2 {
 }
 
 .window-popup {
-    background-color: #eff3fe;
+    background-color: var(--popup-content-color);
     border-radius: 8px;
-    border: 3px solid #3b362a;
+    border: 3px solid var(--accent-color);
     width: 220px;
     height: auto;
     /* align-self: center; */
     overflow: hidden;
     position: fixed;
-    bottom: 220px;
-    left: 50px;
+    /* bottom: 220px; */
+    /* left: 50px; */
     font-size: 12px;
     box-shadow: #3b362a 2px 2px;
+    display: none;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    /* Smooth animation */
+}
+
+.window-popup.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    /* Grows to full size */
 }
 
 .window-popup-header {
-    background-color: #cadaf1;
+    background-color: var(--popup-header-color);
     padding: 8px 16px 8px 16px;
-    border-bottom: 3px solid #3b362a;
+    border-bottom: 3px solid var(--accent-color);
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: space-around;
@@ -222,18 +267,19 @@ h2 {
 .window-popup-button {
     width: 14px;
     height: 14px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    /* border: 2px solid rgba(0, 0, 0, 0.1); */
+    border: 2px solid var(--accent-color);
     /* border: 2px solid #3b362a; */
     border-radius: 50%;
     cursor: pointer;
 }
 
 .window-popup-button:nth-child(1) {
-    background-color: #ff5f57;
+    background-color: var(--quit-button-color);
 }
 
 .window-popup-button:nth-child(2) {
-    background-color: #ffbd2e;
+    background-color: var(--minimize-button-color);
 }
 
 .window-popup-title {
@@ -250,4 +296,14 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+}
+
+.window-popup-content>img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 3px solid var(--accent-color);
+    background-color: var(--button-background-color);
+    background-size: cover;
+    background-position: center;
 }
